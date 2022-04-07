@@ -100,6 +100,43 @@ localhost:8080
 
 You can also open [the deployment of the app on Netlify](https://lds-vue-random-user.netlify.app).
 
+## Improvement method that you can implement for Better Web Performance
+
+Increasing load speed can be done on Frontend, Transport, and Backend
+
+- On the transport side (network) we can do
+  - Minimize text (CSS, JS, HTML)
+  - Minimize Image and use appropriate image format
+    - JPG is good for photos that have a lot of colors, make sure the quality is at (30-60%)
+    - PNG can be used if you need transparency
+    - GIFs can be used for animations or images that don't require a lot of color
+    - SVG is suitable for icons that need to be displayed on large or high resolution screens
+  - Display images with different sizes according to the screen size, for example mobile, don't use images for desktop
+  - Use CDN
+  - Delete image metadata if necessary
+  - Combine CSS and JS that way will not access many requests at one time because there are Max Parallel Requests per browser. Source: <https://stackoverflow.com/questions/985431/max-parallel-http-connections-in-a-browser>
+  - Use HTTP version 2
+- On the Frontend App
+  - Check the Critical Render Path
+    - HTML
+      - Load style on head tag to make sure css and dom downloaded together
+      - If you can load the script right before </body> to avoid rendering blocking
+    - CSS
+      - Only load what is needed
+      - Use the above the fold loading concept, so users can see our styling components while they are still at the top of the website
+      - Don't be too specific on the css selector because the browser will take longer to calculate it
+    - Javascript
+      - Load scripts async or defer
+      - Minimizing manipulation of the DOM
+      - Avoid javascript that causes rendering crashes like prompt()
+  - Optimize the code
+  - Use Code splitting and Dynamic import
+  - Use Progressive web app
+- On the backend/server
+  - Improve caching
+  - Use Gzip and brotli
+  - Use Load balancing
+
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
    [VueJS]: <https://vuejs.org/>
