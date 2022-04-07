@@ -1,8 +1,8 @@
 {
-  "name": "vue-resilient-architecture",
-  "title": "Ongoing resilient Frontend architecture 🔥",
+  "name": "vue-random-user",
+  "title": "Example search and filter user table application with Vue Resilient Architecture 🚀",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "author": {
     "name": "Lucky Dewa Satria",
     "email": "luckydewa123@gmail.com",
@@ -10,16 +10,16 @@
   },
   "bugs": {
     "email": "luckydewa123@gmail.com",
-    "url": "https://github.com/lucky401/vue_template/issues"
+    "url": "https://github.com/lucky401/vue-random-user/issues"
   },
-  "description": "Ongoing resilient Frontend architecture is meant to help you build production-grade projects using the Vue.js framework.",
+  "description": "The Vue and JavaScript ecosystem is full of tools and libraries to help you build your applications. In this example we'll build an application from scratch using Vue Resilient Architecture.",
   "keywords": [
     "Vue boilerplate",
     "Frontend Architecture"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lucky401/vue_template.git"
+    "url": "git+https://github.com/lucky401/vue-random-user.git"
   },
   "engines": {
     "node": ">=14",
