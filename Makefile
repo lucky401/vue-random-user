@@ -1,8 +1,14 @@
-dev:
-	docker build -t web-admin .
-serve:
-	docker run -d -p 8080:3000 --name web-admin web-admin
-stop:
-	docker stop web-admin && docker rm web-admin
+start:
+	docker-compose up --detach
+build:
+	docker-compose up --detach --build
+shell:
+	docker-compose exec vue-random-user bash
 logs:
-	docker logs -f web-admin
+	docker-compose logs --follow vue-random-user
+stop:
+	docker-compose stop
+destroy:
+	docker-compose down
+list:
+	docker-compose ps

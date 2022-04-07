@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  vue-random-user:
+    build:
+      context: ./
+    ports:
+      - 8080:3000
