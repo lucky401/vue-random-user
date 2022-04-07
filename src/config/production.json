@@ -1,0 +1,11 @@
+{
+  "env": {
+    "environment": "production",
+    "hostname": "https://examole.com",
+    "apiBaseUrl": "https://api.examole.com",
+    "apiKey": "x-api-key",
+    "meta": {
+      "title": "Vue Dashboard"
+    }
+  }
+}
