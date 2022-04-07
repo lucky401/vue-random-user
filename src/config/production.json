@@ -1,7 +1,7 @@
 {
   "env": {
     "environment": "production",
-    "hostname": "https://examole.com",
+    "hostname": "https://lds-vue-random-user.netlify.app",
     "apiBaseUrl": "https://randomuser.me/api",
     "apiKey": "x-api-key",
     "meta": {
