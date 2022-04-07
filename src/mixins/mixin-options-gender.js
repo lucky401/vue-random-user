@@ -11,6 +11,7 @@ export default {
           label: 'Male',
         },
       ],
+      searchGenderOptions: null,
     };
   },
 };
