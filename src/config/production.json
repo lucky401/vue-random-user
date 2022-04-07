@@ -2,7 +2,7 @@
   "env": {
     "environment": "production",
     "hostname": "https://examole.com",
-    "apiBaseUrl": "https://randomuser.me/api/",
+    "apiBaseUrl": "https://randomuser.me/api",
     "apiKey": "x-api-key",
     "meta": {
       "title": "Random User"

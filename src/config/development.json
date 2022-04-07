@@ -2,7 +2,7 @@
   "env": {
     "environment": "development",
     "hostname": "http://localhost:8080",
-    "apiBaseUrl": "https://randomuser.me/api/",
+    "apiBaseUrl": "https://randomuser.me/api",
     "apiKey": "x-api-key",
     "meta": {
       "title": "Random User - development"
