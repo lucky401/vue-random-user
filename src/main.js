@@ -10,24 +10,15 @@ import '@/assets/css/main.css';
 
 import { registerModules } from './register-modules';
 
-import userModule from './modules/user';
-import homeModule from './modules/home';
-import loginModule from './modules/login';
+import randomUserModule from './modules/random-user';
 
 /* This is a way to register the modules that are used in the application. */
 registerModules({
-  home: homeModule,
-  user: userModule,
-  login: loginModule,
+  randomUser: randomUserModule,
 });
 
-import Portal from './plugins/portal';
 import vuetify from './plugins/vuetify';
 import Convert from './plugins/convert';
-import VeeValidate from './plugins/veeValidate';
-import VueApexCharts from './plugins/VueApexCharts';
-import Toast from './plugins/VueToast';
-import VueCurrencyFilter from './plugins/VueCurrencyFilter';
 
 /* This is a way to print out the version number of the application. */
 import { log } from './utils/console';
@@ -45,12 +36,7 @@ if (environment !== 'production') {
 new Vue({
   router,
   store,
-  Toast,
-  Portal,
   Convert,
   vuetify,
-  VeeValidate,
-  VueApexCharts,
-  VueCurrencyFilter,
   render: (h) => h(App),
 }).$mount('#app');
