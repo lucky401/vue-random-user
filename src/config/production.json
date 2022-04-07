@@ -2,10 +2,10 @@
   "env": {
     "environment": "production",
     "hostname": "https://examole.com",
-    "apiBaseUrl": "https://api.examole.com",
+    "apiBaseUrl": "https://randomuser.me/api/",
     "apiKey": "x-api-key",
     "meta": {
-      "title": "Vue Dashboard"
+      "title": "Random User"
     }
   }
 }

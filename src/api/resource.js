@@ -1,13 +1,10 @@
 import axios from 'axios';
 import handler from './handler';
-import * as Storage from '@/utils/storage';
-import * as AUTHENTICATION from '@/store-namespace/authentication/types';
-import { base64Decode } from '@/utils/security';
 
 const ENVIRONMENT = process.env.VUE_APP_STAGE || 'local';
 const CONFIG_ENVIRONMENT = require(`@/config/${ENVIRONMENT.toLowerCase()}.json`);
 
-const { apiBaseUrl, apiKey } = CONFIG_ENVIRONMENT.env;
+const { apiBaseUrl } = CONFIG_ENVIRONMENT.env;
 
 function createResource() {
   const instance = axios.create({
@@ -15,21 +12,16 @@ function createResource() {
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json',
-      'x-api-key': apiKey,
     },
   });
 
   instance.interceptors.request.use(
     (config) => {
-      const token = Storage.getStorage(AUTHENTICATION.TOKEN_NAME);
-
-      if (token) {
-        const decodedToken = base64Decode(token);
-        config.headers.Authorization = `Bearer ${decodedToken}`;
-      }
-
+      config.params.format = 'json';
+      config.params.seed = 'ajaib';
       return config;
     },
+
     (error) => {
       return Promise.reject(error);
     }
@@ -39,6 +31,7 @@ function createResource() {
     (response) => {
       return Promise.resolve(response);
     },
+
     (error) => {
       return handler(error);
     }

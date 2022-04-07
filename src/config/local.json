@@ -2,10 +2,10 @@
   "env": {
     "environment": "local",
     "hostname": "http://localhost:8080",
-    "apiBaseUrl": "http://localhost:8080",
+    "apiBaseUrl": "https://randomuser.me/api/",
     "apiKey": "x-api-key",
     "meta": {
-      "title": "Vue Dashboard - Local"
+      "title": "Random User - Local"
     }
   }
 }
