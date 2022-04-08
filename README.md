@@ -88,7 +88,7 @@ docker-compose up --detach --build
 To get the app up and running (and really see if it worked), run:
 
 ```shell
-npm run start
+npm run serve
 ```
 
 Verify the deployment by navigating to your server address in
